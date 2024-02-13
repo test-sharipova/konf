@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1 {
+    margin: 0;
+}
+@font-face {
+    font-family: 'Segoe UI';
+    src: url(/fonts/SegoeUI.ttf) format('ttf');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Segoe UI';
+    src: url(/fonts/SegoeUIBold.ttf) format('ttf');
+    font-weight: 700;
+  }
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #212529;
+}
+
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+.container {
+    width: 90%;
+    max-width: 1456px;
+    margin: 0 auto;
+}
+.btn {
+    &_transparent {
+        background: transparent;
+        border: 2px solid #fff;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        padding: 0 49px;
+        white-space: nowrap;
+        cursor: pointer;
+        color: #fff;
+        font-weight: 600;
+        font-size: 15px;
+
+    }
+    &_blue {
+        border:none;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        background-color: #2764E0;
+        font-size: 15px;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: background-color .3s;
+        cursor: pointer;
+        &:hover {
+            background-color: #3473f4;
+        }
+        &:active {
+            background-color: #104cc4;
+        }
+    }
+}
+
+@import '_header.scss';
+@import '_promo.scss';
+@import '_konf.scss';
+@import '_about.scss';
+@import '_progr.scss';
+@import '_form.scss';
+@import '_footer.scss';
+@import '_media.scss';

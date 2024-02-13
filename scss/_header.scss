@@ -1,0 +1,75 @@
+header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 161px;
+    padding: 53px 0;
+    z-index: 2;
+    .container {
+        height: 100%;
+    }
+}
+.header {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        gap: 12px;
+    }
+}
+.top_menu {
+    height: 100%;
+    position: relative;
+}
+.logo {
+    width: 205px;
+    min-width: 205px;
+    img {
+        max-width: 100%;
+    }
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    gap: 46px;
+    height: 100%;
+    .item {
+        height: 100%;
+    }
+    &__link {
+        color: #fff;
+        text-decoration: none;
+        white-space: nowrap;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &::after {
+            content: '';
+            height: 1px;
+            width: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            position: absolute;
+            transition: width .3s;
+        }
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+.dropdown-toggle {
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    background: url(../img/drop.svg) no-repeat center/contain;
+    display: block;
+    border: none;
+}

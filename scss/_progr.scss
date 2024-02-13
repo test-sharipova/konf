@@ -1,0 +1,37 @@
+.progr {
+    padding: 40px 0 42px;
+    &__title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: normal;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__table {
+        width: 80%;
+        max-width: 955px;
+        margin-top: -10px;
+    }
+    &__row {
+        display: grid;
+        column-gap: 72px;
+        border-bottom: 2px solid #f2f2f4;
+        min-height: 90px;
+        align-items: center;
+        grid-template-columns: 1fr 4fr;
+        padding: 24px 0;
+    }
+    &__time {
+        font-weight: 400;
+        font-size: 32px;
+        color: #6c757d;
+        line-height: normal;
+        white-space: nowrap;
+    }
+    &__text {
+        font-weight: 600;
+        font-size: 32px;
+    }
+}

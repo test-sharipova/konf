@@ -1,0 +1,100 @@
+.about {
+    padding: 40px 0 40px;
+    &__title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: normal;
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 54px;
+        margin-top: 60px;
+        max-width: 71%;
+        margin-bottom: 84px;
+    }
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        gap: 32px;
+        &:nth-child(1) {
+            .about__text {
+                width: 400px;
+            }
+        }
+        &:nth-child(2) {
+            .about__text {
+                width: 485px;
+            }
+        }
+        &:nth-child(3) {
+            .about__text {
+                width: 368px;
+            }
+        }
+        &:nth-child(4) {
+            .about__text {
+                width: 368px;
+            }
+        }
+        &:nth-child(5) {
+            .about__text {
+                width: 356px;
+            }
+        }
+        &:nth-child(6) {
+            .about__text {
+                width: 355px;
+            }
+        }
+        &:nth-child(7) {
+            .about__text {
+                width: 342px;
+            }
+        }
+        &:nth-child(8) {
+            .about__text {
+                width: 403px;
+            }
+        }
+    }
+    &__text {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 124%;
+    }
+    &__num {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+        min-height: 60px;
+        img {
+            width: 100%;
+        }
+    }
+    &__info {
+        background-image: image-set(
+        url("../img/about-bg.webp") type("image/webp") 1x,
+        url("../img/about-bg-2x.webp") type("image/webp") 2x,  
+        url("../img/about-bg.png") type("image/png") 1x,
+        url("../img/about-bg-2x.png") type("image/png") 2x
+        );
+        color: #fff;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 30px;
+        padding: 90px 92px 118px;
+        &__text {
+            font-size: 32px;
+            line-height: 125%;
+            width: 60%;
+            max-width: 801px;
+            margin-bottom: 48px;
+        }
+        .btn_blue {
+            width: 385px;
+        }
+        }
+
+}
