@@ -51,3 +51,80 @@ let maskOptions = {
 for (let i = 0; i < element.length; i++) {
     let mask = IMask(element[i], maskOptions);
 }
+
+//анимация
+function animation() {
+	gsap.registerPlugin(ScrollTrigger);
+  
+	 gsap.to('.promo__slide1', {
+	   'background-position': '0% 0%',
+	   scrollTrigger: {
+		 start: 'top top',
+		 end: '500px',
+		 // markers: true,
+		 scrub: true,
+	   }
+	 });
+  
+	  
+	 gsap.from('.about__item', {
+	  opacity: 0,
+	  yPercent: 100,
+	  stagger: 0.2,
+	  scrollTrigger: {
+		trigger: '.about__wrapper',
+		start: '30% bottom', 
+	   
+		toggleActions: 'play none none reverse',
+	  }
+	});
+	gsap.from('.progr__row', {
+		opacity: 0,
+		yPercent: 100,
+		stagger: 0.2,
+		scrollTrigger: {
+		  trigger: '.progr__table',
+		  start: '30% bottom', 
+		 
+		  toggleActions: 'play none none reverse',
+		}
+	  });
+	gsap.from('.konf__wrapper__overlay', {
+   
+	 'width': '105%',
+	 'right': '-2%',
+	  scrollTrigger: {
+		trigger: '.konf__wrapper',
+		start: 'top 70%', 
+		
+		toggleActions: 'play none none reverse',
+	  }
+	});
+	gsap.from('.about__img', {
+	  opacity: 0,
+	  yPercent: 100,
+	  'transform': 'scale(1.4)',
+  
+	  stagger: 0.4,
+	  scrollTrigger: {
+		trigger: '.works__telegram',
+		start: 'bottom 30%', 
+	   
+		toggleActions: 'play none none reverse',
+	  }
+	});
+	gsap.from('.process__item', {
+	  opacity: 0,
+	  yPercent: 100,
+	  stagger: 0.2,
+	  scrollTrigger: {
+		trigger: '.process__wrapper',
+		start: '50% bottom', 
+	   
+		toggleActions: 'play none none reverse',
+	  }
+	});
+	
+	
+  }
+  animation();

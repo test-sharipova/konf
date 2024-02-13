@@ -2,8 +2,7 @@
    padding: 62px 0 40px;
     &__wrapper {
         background-image: image-set(
-            url("../img/konf-bg.webp") type("image/webp") 1x,
-            url("../img/konf-bg-2x.webp") type("image/webp") 2x,
+            
             url("../img/konf-bg.png") type("image/png") 1x,
             url("../img/konf-bg-2x.png") type("image/png") 2x
         );
@@ -16,6 +15,16 @@
         justify-content: space-between;
         padding: 66px 112px 0 92px;
         gap: 48px;
+        position: relative;
+        &__overlay {
+            
+            width: 0%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+        }
     }
     &__img {
         width: 40%;
