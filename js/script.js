@@ -42,6 +42,14 @@ function responseMenu(){
 		responseMenu();
 	}).trigger('resize');
 
+//показ модального окна
+$('.consult').on('click', function(){
+	$('.overlay, .modal').fadeIn();
+});
+$('.modal__close').on('click', function(){
+	$('.overlay, .modal, .thanks').fadeOut();
+});
+
 //маска для телефона
 
 let element = document.querySelectorAll('.phone');
