@@ -1,0 +1,60 @@
+.org {
+    padding: 40px 0 68px;
+    &__wrapper {
+        background-image: image-set(
+            
+        url("../img/org-bg.png") type("image/png") 1x,
+        url("../img/org-bg-2x.png") type("image/png") 2x
+        );
+        color: #fff;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 30px;
+        padding: 67px 113px 57px 92px;
+    }
+    &__title {
+        font-size: 48px;
+        line-height: normal;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 72px;
+        flex-wrap: wrap;
+        span {
+            white-space: nowrap;
+        }
+        a {
+            width: 311px;
+            img {
+                width: 100%;
+                display: block;
+                margin-bottom: -14px;
+            }
+        }
+        .org__wrap {
+            display: flex;
+            align-items: center;
+            gap: 47px;
+        }
+    }
+    &__text {
+        font-size: 32px;
+        line-height: normal;
+        font-weight: 600;
+        margin-bottom: 38px;
+    }
+    &__logos {
+        display: flex;
+        align-items: flex-end;
+        gap: 95px;
+        &__item {
+            transform: scale(1, 1);
+            img {
+                display: block;
+                max-width: 100%;
+            }
+        }
+    }
+}

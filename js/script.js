@@ -56,15 +56,15 @@ for (let i = 0; i < element.length; i++) {
 function animation() {
 	gsap.registerPlugin(ScrollTrigger);
   
-	 gsap.to('.promo__slide1', {
-	   'background-position': '0% 0%',
-	   scrollTrigger: {
-		 start: 'top top',
-		 end: '500px',
-		 // markers: true,
-		 scrub: true,
-	   }
-	 });
+	//  gsap.to('.promo__slide1', {
+	//    'background-position': '0% 0%',
+	//    scrollTrigger: {
+	// 	 start: 'top top',
+	// 	 end: '500px',
+	// 	 // markers: true,
+	// 	 scrub: true,
+	//    }
+	//  });
   
 	  
 	 gsap.from('.about__item', {
@@ -84,7 +84,7 @@ function animation() {
 		stagger: 0.2,
 		scrollTrigger: {
 		  trigger: '.progr__table',
-		  start: '30% bottom', 
+		  start: 'bottom bottom', 
 		 
 		  toggleActions: 'play none none reverse',
 		}
@@ -100,30 +100,30 @@ function animation() {
 		toggleActions: 'play none none reverse',
 	  }
 	});
-	gsap.from('.about__img', {
+	gsap.from('.org__logos__item', {
 	  opacity: 0,
-	  yPercent: 100,
-	  'transform': 'scale(1.4)',
+	  yPercent: 30,
+	  'transform': 'scale(1.7)',
   
 	  stagger: 0.4,
 	  scrollTrigger: {
-		trigger: '.works__telegram',
+		trigger: '.progr',
 		start: 'bottom 30%', 
 	   
 		toggleActions: 'play none none reverse',
 	  }
 	});
-	gsap.from('.process__item', {
-	  opacity: 0,
-	  yPercent: 100,
-	  stagger: 0.2,
-	  scrollTrigger: {
-		trigger: '.process__wrapper',
-		start: '50% bottom', 
+	// gsap.from('.process__item', {
+	//   opacity: 0,
+	//   yPercent: 100,
+	//   stagger: 0.2,
+	//   scrollTrigger: {
+	// 	trigger: '.process__wrapper',
+	// 	start: '50% bottom', 
 	   
-		toggleActions: 'play none none reverse',
-	  }
-	});
+	// 	toggleActions: 'play none none reverse',
+	//   }
+	// });
 	
 	
   }
