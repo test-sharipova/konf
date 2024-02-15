@@ -140,17 +140,17 @@ if (document.documentElement.clientWidth > 767) {
 			  toggleActions: 'play none none reverse',
 			}
 		  });
-		gsap.from('.konf__wrapper__overlay', {
+		// gsap.from('.konf__wrapper__overlay', {
 	   
-		 'width': '105%',
-		 'right': '-2%',
-		  scrollTrigger: {
-			trigger: '.konf__wrapper',
-			start: 'top 70%', 
+		//  'width': '105%',
+		//  'right': '-2%',
+		//   scrollTrigger: {
+		// 	trigger: '.konf__wrapper',
+		// 	start: 'top 70%', 
 			
-			toggleActions: 'play none none reverse',
-		  }
-		});
+		// 	toggleActions: 'play none none reverse',
+		//   }
+		// });
 		gsap.from('.org__logos__item', {
 		  opacity: 0,
 		  yPercent: 30,
