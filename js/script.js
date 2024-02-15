@@ -45,7 +45,7 @@ function responseMenu(){
 //показ модального окна
 $('.consult').on('click', function(){
 	$('.overlay, .modal').fadeIn();
-	
+	document.body.style.top = `-${window.scrollY}px`;
 	if (document.documentElement.clientWidth < 767) {
 		document.body.style.top = `-${window.scrollY}px`;
 		document.body.style.position = 'fixed';
@@ -60,7 +60,9 @@ $('.modal__close, .overlay').on('click', function(){
 	document.body.style.position = '';
 	document.body.style.top = '';
 	window.scrollTo(0, parseInt(scrollY || '0') * -1);
-	
+	document.body.style.paddingRight = '';
+	let header = document.querySelector('header');
+	header.style.paddingRight = '';
 	document.body.style.width = '';
 });
 
