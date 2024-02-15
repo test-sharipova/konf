@@ -45,11 +45,15 @@ function responseMenu(){
 //показ модального окна
 $('.consult').on('click', function(){
 	$('.overlay, .modal').fadeIn();
-	$('.page__wrapper').addClass('opened_modal');
+	// $('.page__wrapper').addClass('opened_modal');
+	document.body.style.position = 'fixed';
+	document.body.style.top = `-${window.scrollY}px`;
 });
 $('.modal__close').on('click', function(){
 	$('.overlay, .modal, .thanks').fadeOut();
-	$('.page__wrapper').removeClass('opened_modal');
+	// $('.page__wrapper').removeClass('opened_modal');
+	document.body.style.position = '';
+	document.body.style.top = '';
 });
 
 //маска для телефона
