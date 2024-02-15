@@ -48,6 +48,7 @@ $('.consult').on('click', function(){
 	// $('.page__wrapper').addClass('opened_modal');
 	document.body.style.top = `-${window.scrollY}px`;
 	document.body.style.position = 'fixed';
+	document.body.style.width = '100%';
 	if (document.documentElement.clientWidth > 767) {
 		document.body.style.paddingRight = '17px';
 		let header = document.querySelector('header');
@@ -57,7 +58,7 @@ $('.consult').on('click', function(){
 	
 });
 $('.modal__close').on('click', function(){
-	$('.overlay, .modal, .thanks').fadeOut();
+	$('.overlay, .modal, .thanks').fadeOut(0);
 	// $('.page__wrapper').removeClass('opened_modal');
 	const scrollY = document.body.style.top;
 	document.body.style.position = '';
@@ -66,6 +67,7 @@ $('.modal__close').on('click', function(){
 	document.body.style.paddingRight = '';
 	let header = document.querySelector('header');
 	header.style.paddingRight = '';
+	document.body.style.width = '';
 });
 
 //плавный скролл к ссылкам
