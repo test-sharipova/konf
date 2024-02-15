@@ -59,22 +59,30 @@ let maskOptions = {
 for (let i = 0; i < element.length; i++) {
     let mask = IMask(element[i], maskOptions);
 }
-
+//form
+$('form').submit(function(e) {
+	e.preventDefault();
+	$.ajax({
+		type: "POST",
+		url: "/send.php",
+		data: $(this).serialize()
+	}).done(function() {
+		$(this).find("input").val("");
+		
+		$('.modal').fadeOut();
+		$('.thanks').fadeIn();
+		$('.overlay').fadeIn();
+	
+		$('form').trigger('reset');
+		console.log('ok');
+	});
+	return false;
+	});   
 //анимация
 function animation() {
 	gsap.registerPlugin(ScrollTrigger);
   
-	//  gsap.to('.promo__slide1', {
-	//    'background-position': '0% 0%',
-	//    scrollTrigger: {
-	// 	 start: 'top top',
-	// 	 end: '500px',
-	// 	 // markers: true,
-	// 	 scrub: true,
-	//    }
-	//  });
-  
-	  
+	
 	 gsap.from('.about__item', {
 	  opacity: 0,
 	  yPercent: 100,
@@ -121,18 +129,7 @@ function animation() {
 		toggleActions: 'play none none reverse',
 	  }
 	});
-	// gsap.from('.process__item', {
-	//   opacity: 0,
-	//   yPercent: 100,
-	//   stagger: 0.2,
-	//   scrollTrigger: {
-	// 	trigger: '.process__wrapper',
-	// 	start: '50% bottom', 
-	   
-	// 	toggleActions: 'play none none reverse',
-	//   }
-	// });
-	
+
 	
   }
   animation();
