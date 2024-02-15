@@ -22,7 +22,7 @@ function responseMenu(){
 	});
 	if (hide_from < items.length - 1) {
 		items.eq(hide_from).nextAll('li.item').appendTo('ul.dropdown-menu');
-		// items.css({'width':(max_width / (hide_from)) + 'px'});
+		
         items.css({'width':'fit-content'});
 		$('ul.menu li.dd_menu').show();
 	}
@@ -45,7 +45,7 @@ function responseMenu(){
 //показ модального окна
 $('.consult').on('click', function(){
 	$('.overlay, .modal').fadeIn();
-	// $('.page__wrapper').addClass('opened_modal');
+	
 	document.body.style.top = `-${window.scrollY}px`;
 	document.body.style.position = 'fixed';
 	document.body.style.width = '100%';
@@ -57,9 +57,9 @@ $('.consult').on('click', function(){
 	
 	
 });
-$('.modal__close').on('click', function(){
+$('.modal__close, .overlay').on('click', function(){
 	$('.overlay, .modal, .thanks').fadeOut(0);
-	// $('.page__wrapper').removeClass('opened_modal');
+	
 	const scrollY = document.body.style.top;
 	document.body.style.position = '';
 	document.body.style.top = '';
