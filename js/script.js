@@ -46,14 +46,40 @@ function responseMenu(){
 $('.consult').on('click', function(){
 	$('.overlay, .modal').fadeIn();
 	// $('.page__wrapper').addClass('opened_modal');
-	document.body.style.position = 'fixed';
 	document.body.style.top = `-${window.scrollY}px`;
+	document.body.style.position = 'fixed';
+	if (document.documentElement.clientWidth > 767) {
+		document.body.style.paddingRight = '17px';
+		let header = document.querySelector('header');
+		header.style.paddingRight = '17px';
+	}
+	
+	
 });
 $('.modal__close').on('click', function(){
 	$('.overlay, .modal, .thanks').fadeOut();
 	// $('.page__wrapper').removeClass('opened_modal');
+	const scrollY = document.body.style.top;
 	document.body.style.position = '';
 	document.body.style.top = '';
+	window.scrollTo(0, parseInt(scrollY || '0') * -1);
+	document.body.style.paddingRight = '';
+	let header = document.querySelector('header');
+	header.style.paddingRight = '';
+});
+
+//плавный скролл к ссылкам
+$(".scrollto a").on("click", function () {
+    let href = $(this).attr("href");
+
+    $("html, body").animate({
+        scrollTop: $(href).offset().top
+    }, {
+        duration: 370,   // по умолчанию «400»
+        easing: "linear" // по умолчанию «swing»
+    });
+
+    return false;
 });
 
 //маска для телефона
