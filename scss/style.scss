@@ -75,6 +75,10 @@ a[x-apple-data-detectors] {
         }
     }
 }
+.opened_modal {
+    overflow: hidden;
+}
+
 
 @import '_header.scss';
 @import '_promo.scss';

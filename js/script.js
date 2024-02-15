@@ -45,9 +45,11 @@ function responseMenu(){
 //показ модального окна
 $('.consult').on('click', function(){
 	$('.overlay, .modal').fadeIn();
+	$('.page__wrapper').addClass('opened_modal');
 });
 $('.modal__close').on('click', function(){
 	$('.overlay, .modal, .thanks').fadeOut();
+	$('.page__wrapper').removeClass('opened_modal');
 });
 
 //маска для телефона
