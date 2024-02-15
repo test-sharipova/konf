@@ -79,57 +79,59 @@ $('form').submit(function(e) {
 	return false;
 	});   
 //анимация
-function animation() {
-	gsap.registerPlugin(ScrollTrigger);
-  
-	
-	 gsap.from('.about__item', {
-	  opacity: 0,
-	  yPercent: 100,
-	  stagger: 0.2,
-	  scrollTrigger: {
-		trigger: '.about__wrapper',
-		start: '30% bottom', 
-	   
-		toggleActions: 'play none none reverse',
-	  }
-	});
-	gsap.from('.progr__row', {
-		opacity: 0,
-		yPercent: 100,
-		stagger: 0.2,
-		scrollTrigger: {
-		  trigger: '.progr__table',
-		  start: 'bottom bottom', 
-		 
-		  toggleActions: 'play none none reverse',
-		}
-	  });
-	gsap.from('.konf__wrapper__overlay', {
-   
-	 'width': '105%',
-	 'right': '-2%',
-	  scrollTrigger: {
-		trigger: '.konf__wrapper',
-		start: 'top 70%', 
+if (document.documentElement.clientWidth > 767) {
+	function animation() {
+		gsap.registerPlugin(ScrollTrigger);
+	  
 		
-		toggleActions: 'play none none reverse',
-	  }
-	});
-	gsap.from('.org__logos__item', {
-	  opacity: 0,
-	  yPercent: 30,
-	  'transform': 'scale(1.7)',
-  
-	  stagger: 0.4,
-	  scrollTrigger: {
-		trigger: '.progr',
-		start: 'bottom 30%', 
+		 gsap.from('.about__item', {
+		  opacity: 0,
+		  yPercent: 100,
+		  stagger: 0.2,
+		  scrollTrigger: {
+			trigger: '.about__wrapper',
+			start: '30% bottom', 
+		   
+			toggleActions: 'play none none reverse',
+		  }
+		});
+		gsap.from('.progr__row', {
+			opacity: 0,
+			yPercent: 100,
+			stagger: 0.2,
+			scrollTrigger: {
+			  trigger: '.progr__table',
+			  start: 'bottom bottom', 
+			 
+			  toggleActions: 'play none none reverse',
+			}
+		  });
+		gsap.from('.konf__wrapper__overlay', {
 	   
-		toggleActions: 'play none none reverse',
-	  }
-	});
-
+		 'width': '105%',
+		 'right': '-2%',
+		  scrollTrigger: {
+			trigger: '.konf__wrapper',
+			start: 'top 70%', 
+			
+			toggleActions: 'play none none reverse',
+		  }
+		});
+		gsap.from('.org__logos__item', {
+		  opacity: 0,
+		  yPercent: 30,
+		  'transform': 'scale(1.7)',
+	  
+		  stagger: 0.4,
+		  scrollTrigger: {
+			trigger: '.progr',
+			start: 'bottom 30%', 
+		   
+			toggleActions: 'play none none reverse',
+		  }
+		});
 	
-  }
-  animation();
+		
+	  }
+	  animation();
+}
