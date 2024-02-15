@@ -18,6 +18,22 @@ header {
         height: 100%;
         gap: 12px;
     }
+    &__phone {
+        display: none;
+        span {
+            color: transparent;
+            width: 1px;
+            height: 1px;
+            font-size: 1px;
+            text-decoration: none;
+            clip: rect(0,0,0,0);
+            margin: -1px;
+            position: absolute;
+        }
+        background: url(../img/phone.svg) no-repeat center/cover;
+        width: 20px;
+        height: 20px;
+    }
 }
 .top_menu {
     height: 100%;
